@@ -6,7 +6,7 @@ bspc monitor -d 1 2 3 4
 
 bspc config border_width         3
 bspc config window_gap          12
-bspc config top_padding 	26
+bspc config top_padding         26
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -29,7 +29,7 @@ setxkbmap es
 xset r rate 200
 
 picom --config $HOME/.config/picom/picom.conf &
-polybar -r bar &
+polybar -r &
 xrandr --output Virtual1 --mode 1600x900
 sleep 1
-feh --bg-scale $HOME/Downloads/pexels-jvdm-1564839.jpg
+feh --bg-scale $HOME/Downloads/pexels-8moments-1323550.jpg
