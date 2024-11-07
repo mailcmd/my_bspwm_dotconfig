@@ -9,6 +9,8 @@ super + Return
 # program launcher
 super + @space
 	dmenu_run
+alt + F2
+	dmenu_run -nb black -nf white -fn 'monospace:size=12' -c -bw 3 -l 8
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -25,6 +27,10 @@ super + alt + {q,r}
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
+
+alt + F4
+	bspc node -{c,k}
+
 
 # alternate between the tiled and monocle layout
 super + m
@@ -89,6 +95,10 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus to the given desktop
+ctrl + F{1-9}
+	bspc desktop -f '^{1-9}'
 
 #
 # preselect
