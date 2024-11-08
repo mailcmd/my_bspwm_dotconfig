@@ -73,8 +73,9 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 alt + Tab
-	bspc node -f {next,prev}.local.!hidden.window
-
+    bspc node next.local.!hidden.window -f ;\
+    for n in $(bspc query -N) ; do bspc node $n -l below ; done ;\
+    bspc node $(bspc query -N -n) -f -l above
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
